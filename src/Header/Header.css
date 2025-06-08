@@ -1,0 +1,21 @@
+*{
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(72, 118, 217);
+    padding: 20px;
+    align-items: center;
+}
+nav{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.4rem;
+}
+header h2, header a{
+    color: white;
+}

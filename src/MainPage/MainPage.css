@@ -1,0 +1,32 @@
+.containerHome{
+    display: flex;
+    flex-direction: column;
+}
+.containerHome img{
+    max-width: 400px;
+    margin: 10px 0;
+}
+.linha{
+    width: 80%;
+}
+.containerHome p{
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 400px;
+    
+}
+.containerHome button{
+    width: 40%;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: var(--corPrimaria);
+    color: white;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    transition: 0.2s;
+    border: none;
+}
+.containerHome button:hover{
+    background-color: rgb(47, 47, 226);
+    cursor: pointer;
+}

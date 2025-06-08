@@ -1,0 +1,14 @@
+.containerAddOrdenar{
+    display: flex;
+    flex-direction: column;
+}
+.containerAddOrdenar p{
+    color: rgb(87, 87, 87);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.containerAddOrdenar img{
+    width: 250px;
+    height: auto;
+}
