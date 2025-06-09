@@ -1,5 +1,7 @@
 import "./MainPage.css"
 import Tec from "../assets/tecnologia.png"
+import Button from "./Button";
+
 const MainPage = () =>{
     return(
         <>
@@ -9,7 +11,7 @@ const MainPage = () =>{
                 
                 <img id="img" src={Tec} alt="" />
                 <p>Voce sabe o quanto a tecnologia avancou nos últimos anos?</p>
-                <button>Iniciar o Quiz</button>
+                <Button msg="Inicar Quiz"></Button>
             </div>
         </>
     );
