@@ -1,8 +1,14 @@
 import "./MainPage.css"
 import Tec from "../assets/tecnologia.png"
 import Button from "./Button";
+import { useNavigate } from "react-router-dom";
 
 const MainPage = () =>{
+
+    const navegate = useNavigate();
+    const irParaPerguntas = () =>{
+        navegate("/perguntas")
+    }    
     return(
         <>
             <div className="containerHome">
@@ -11,7 +17,7 @@ const MainPage = () =>{
                 
                 <img id="img" src={Tec} alt="" />
                 <p>Voce sabe o quanto a tecnologia avancou nos últimos anos?</p>
-                <Button msg="Inicar Quiz"></Button>
+                <button onClick={irParaPerguntas}>Iniciar Quiz</button>
             </div>
         </>
     );

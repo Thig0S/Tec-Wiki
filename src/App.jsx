@@ -1,23 +1,26 @@
-import "./index.css"
-import Header from "./Header/Header"
+// App.jsx
+import "./index.css";
+import Header from "./Header/Header";
 import MainPage from "./MainPage/MainPage.jsx";
 import Add from "./Adds/Add.jsx";
 import Footer from "./Footer/Footer.jsx";
 import PerguntasPage from "./MainPage/PerguntasPage.jsx";
 
-function App() {
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+function App() {
   return (
-    <>
-      <Header></Header>
+    <Router>
+      <Header />
       <div className="containerPrincipal">
-          <MainPage/>
-          <Add/>  
+        <Routes>
+          <Route path="/" element={<><MainPage /><Add /></>} />
+          <Route path="/perguntas" element={<PerguntasPage/>} />
+        </Routes>
       </div>
-          <PerguntasPage></PerguntasPage>
-      <Footer/>
-    </> 
-  )
+      <Footer />
+    </Router>
+  );
 }
 
-export default App
+export default App;
