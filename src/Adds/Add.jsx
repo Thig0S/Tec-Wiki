@@ -6,6 +6,7 @@ const Add = () => {
     <div className="containerAddOrdenar">
             <p>Publicidade Google</p>
             <img src={Img} alt="" />
+            <hr />
         </div>
     </>);
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import"./ComponentesPerguntas.css"
-import Button from '../MainPage/Button';
+import Swal from 'sweetalert2';
 
 function Perguntas({ dados }) {
   const [respostas, setRespostas] = useState({});
@@ -25,8 +25,58 @@ function Perguntas({ dados }) {
         acertos++;
       }
     });
-
-    alert(`Você acertou ${acertos} de ${dados.length} perguntas!`);
+if (acertos === 0) {
+  Swal.fire({
+    title: "Você é um homem das cavernas! 🦴",
+    text: "Nenhuma resposta correta, bora estudar! 😅",
+    imageUrl: "/public/pre-historia.jpg",
+    imageWidth: 300,
+    imageHeight: 300,
+    confirmButtonText: "Tentar de novo",
+    customClass: {
+    confirmButton: 'botaoSweet',
+  }
+  });
+} 
+else if (acertos >= 1 && acertos < 6) {
+  Swal.fire({
+    title: "Você é uma pessoa normal 🧍",
+    text: `Você acertou ${acertos} perguntas!`,
+    imageUrl: "/public/pessoanormal.jpg",
+    imageWidth: 300,
+    imageHeight: 300,
+    confirmButtonText: "Melhorar",
+    customClass: {
+    confirmButton: 'botaoSweet',
+  }
+  });
+} 
+else if (acertos >= 1 && acertos < 9) {
+  Swal.fire({
+    title: "Quase um gênio 🤓",
+    text: `Você acertou ${acertos} perguntas!`,
+    imageUrl: "/public/nerd.png",
+    imageWidth: 300,
+    imageHeight: 300,
+    confirmButtonText: "Boa!",
+    customClass: {
+    confirmButton: 'botaoSweet',
+  }
+  });
+} 
+else {
+  Swal.fire({
+    title: "Você é o ChatGPT! 🧠💻",
+    text: `Acertou ${acertos} perguntas, parabéns!`,
+    imageUrl: "/public/goats.png",
+    imageWidth: 200,
+    imageHeight: 200,
+    confirmButtonText: "Sou brabo 😎",
+    customClass: {
+    confirmButton: 'botaoSweet',
+  }
+  });
+}
   };
 
   return (
@@ -38,7 +88,7 @@ function Perguntas({ dados }) {
           </h2>
           <ul className="listaPerguntas">
             {item.opcoes.map((opcao, i) => (
-              <li key={i} className="flex items-center space-x-2">
+              <li key={i} className="linhaPerguntas">
                 <input
                   type="radio"
                   name={`pergunta-${index}`}

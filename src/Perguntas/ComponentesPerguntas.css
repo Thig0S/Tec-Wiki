@@ -43,3 +43,15 @@ button:hover{
     background-color: rgb(47, 47, 226);
     cursor: pointer;
 }
+.divPerguntas{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+.containerAsPerguntas{
+    width: 60%;
+    background-color: rgb(245, 249, 249);
+    padding: 20px;
+    border-radius: 20px;
+}

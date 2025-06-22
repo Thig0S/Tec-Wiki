@@ -17,3 +17,81 @@
   justify-content: space-around;
   min-height: 85vh;
 }
+input[type="radio"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #555;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+input[type="radio"]:checked {
+  border-color: #007bff;
+  background-color: #ffffff;
+}
+
+input[type="radio"]::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  display: none;
+}
+
+input[type="radio"]:checked::before {
+  display: block;
+}
+input{
+  background-color: #ffffff;
+}
+.input[type="radio"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #555;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+input[type="radio"]:checked {
+  border-color: #007bff;
+  background-color: #8a8f95;
+}
+
+input[type="radio"]::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  display: none;
+}
+
+input[type="radio"]:checked::before {
+  display: block;
+}
+.linhaPerguntas{
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+.linhaPerguntas :first-child{
+  margin-right: 20px;
+}
+.botaoSweet{
+  width: 200px;
+}

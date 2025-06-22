@@ -12,12 +12,14 @@ const MainPage = () =>{
     return(
         <>
             <div className="containerHome">
+                <div className="divIsso">
                 <h2>TecQuiz - Tecnologias Atuais</h2>
                 <div className="linha" style={{ width: '300px', height: '3px', backgroundColor: 'blue', marginBottom:'10px' }}></div>
                 
                 <img id="img" src={Tec} alt="" />
                 <p>Voce sabe o quanto a tecnologia avancou nos últimos anos?</p>
                 <button onClick={irParaPerguntas}>Iniciar Quiz</button>
+                </div>
             </div>
         </>
     );
